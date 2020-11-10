@@ -1,0 +1,133 @@
+.row-grid {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-areas: 'img ctn_info' 'ctn_message ctn_message' 'ctn_addendums ctn_addendums';
+    grid-template-columns: 70px 1fr;
+    grid-template-rows: 70px auto;
+    margin-top: 15px;
+    transition: 250ms ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 10px 0 10px 10px;
+    border-bottom: dashed 1px #ccc;
+    cursor: pointer;
+    &:first-child {
+        margin-top: 0
+    }
+}
+
+
+/* Container referente ao codigo interno do produto */
+
+.container-img {
+    width: 70px;
+    height: 70px;
+    padding: 5px;
+    grid-area: img;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, .2);
+    img {
+        width: 100%;
+    }
+}
+
+// 
+.ctn_info {
+    width: 100%;
+    height: 100%;
+    grid-area: ctn_info;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 15px;
+}
+
+// 
+.span-icon-table {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: block;
+    padding: 8px;
+    transition: 150ms;
+    cursor: pointer;
+    svg {
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+    &:active svg {
+        transform: scale(.8)
+    }
+}
+
+// 
+.close {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+}
+
+.option {
+    opacity: 1;
+}
+
+// 
+.checkbox-options-product {
+    display: none;
+    &:checked~.container-box {
+        width: 170px;
+        height: auto;
+    }
+    &:checked+label>.option {
+        opacity: 0;
+    }
+    &:checked+label>.close {
+        opacity: 1;
+    }
+}
+
+// Addendums
+.list-addendums {
+    grid-area: ctn_addendums;
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    li {
+        font-size: 1.7em;
+        font-weight: bold;
+        color: #707070;
+        margin: 0 10px;
+    }
+}
+
+// 
+.ctn_message {
+    grid-area: ctn_message;
+    width: 100%;
+    height: auto;
+}
+
+.message-item {
+    padding: 5px 0;
+    font-size: 1.6em;
+    line-height: 1.2;
+    color: #757575;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+//
+@media screen and (min-width:800px) {
+    .span-icon-table {
+        width: 48px;
+        height: 48px;
+    }
+}

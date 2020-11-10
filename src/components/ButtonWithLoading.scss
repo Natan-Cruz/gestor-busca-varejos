@@ -1,0 +1,53 @@
+.active-loading {
+    background: #ed1641;
+    &>.ctn-text-button {
+        display: none;
+    }
+    &>.spinner-loading-button {
+        animation-play-state: running !important;
+        display: block;
+    }
+}
+
+.ctn-text-button {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    svg {
+        width: 24px;
+        height: 24px;
+        margin-right: 15px;
+    }
+}
+
+.text-button {
+    font-size: 1.7em;
+    color: inherit;
+}
+
+.spinner-loading-button {
+    transform: rotate(0deg);
+    width: 30px;
+    height: 30px;
+    border: solid 4px transparent;
+    border-bottom: solid 4px #fff;
+    border-radius: 50%;
+    transform: rotate(0deg);
+    animation: animation-reload 1250ms infinite reverse paused;
+    display: none;
+}
+
+.animation-running {
+    animation-play-state: running !important;
+    display: block;
+}
+
+@keyframes animation-reload {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(1080deg);
+    }
+}

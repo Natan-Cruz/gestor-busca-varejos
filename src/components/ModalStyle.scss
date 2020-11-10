@@ -1,0 +1,36 @@
+.modal {
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .4);
+    display: none;
+    opacity: 0;
+    transition: 50ms;
+    z-index: 3000;
+}
+
+.display-modal_flex {
+    display: flex;
+}
+
+.show-modal {
+    opacity: 1;
+}
+
+.content-modal {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    border-radius: 5px;
+    transition: 200ms;
+    transform: scale(.8);
+    position: relative;
+}
+
+.show-content-modal {
+    transform: scale(1)
+}

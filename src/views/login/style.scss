@@ -1,0 +1,132 @@
+.main {
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(245, 245, 245);
+    padding: 20px 0;
+}
+
+.container-form {
+    width: 370px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, .2);
+    padding: 10px 25px;
+    background: #fff;
+}
+
+.title {
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.group-input {
+    margin-bottom: 10px;
+}
+
+.label-input {
+    font-size: 1.7em;
+    display: block;
+    margin-bottom: 3px;
+}
+
+.input {
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.7em;
+    padding-left: 15px;
+    display: block;
+    background: rgb(245, 245, 245);
+    &:focus {
+        box-shadow: inset 0px 0 8px -6px #000000d9;
+    }
+}
+
+.icon-eye {
+    width: 50px;
+    height: 50px;
+    padding: 12px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    user-select: none;
+    &:active {
+        transform: scale(.9);
+    }
+    &>svg {
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        transition: 100ms;
+    }
+}
+
+
+/*  */
+
+.span-between {
+    font-size: 1.7em;
+    font-weight: bold;
+    color: #6f6f6f;
+    text-align: center;
+    margin: 15px 0;
+}
+
+
+/*  */
+
+.container-message {
+    margin: 5px 0
+}
+
+.text-medium {
+    font-size: 1.7em;
+    line-height: 1em;
+    white-space: nowrap;
+}
+
+.message {
+    font-size: 1.7em;
+    line-height: 1em;
+    height: 0;
+    opacity: 0;
+    font-weight: bold;
+    transition: 150px;
+    color: #ff0033;
+    list-style: inside;
+    margin: 5px 0;
+    &::marker {
+        margin-right: 10px;
+    }
+}
+
+.link-form {
+    font-size: 1.7em;
+    font-weight: bold;
+    color: #6f6f6f;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+@media screen and (max-width:420px) {
+    .container-form {
+        background: rgb(245, 245, 245);
+        box-shadow: none;
+    }
+    .input {
+        background: #fff;
+    }
+}

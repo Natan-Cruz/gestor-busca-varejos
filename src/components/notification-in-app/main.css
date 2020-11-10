@@ -1,0 +1,50 @@
+.message-popup{
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    background: rgb(54, 49, 49);
+    color: #fff;
+    font-size: 1.7em;
+    opacity: 0;
+    position: fixed;
+    left:10px;
+    bottom: 20px;
+    padding: 10px 20px;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, .2);
+    -webkit-transform: translateX(-50px); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+      -ms-transform: translateX(-50px); /* IE 9 */
+          transform: translateX(-50px); /* IE 10, Fx 16+, Op 12.1+ */
+    z-index: 10000;
+    -webkit-animation: animation-open 250ms both; /* Chr, Saf */
+    animation: animation-open 250ms both; /* IE >9, Fx >15, Op >12.0 */
+}
+
+@keyframes animation-open{
+    0%{
+        opacity: 0;
+        -webkit-transform: translateX(-50px); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+            -ms-transform: translateX(-50px); /* IE 9 */
+                transform: translateX(-50px); /* IE 10, Fx 16+, Op 12.1+ */
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform: translateX(0); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+            -ms-transform: translateX(0); /* IE 9 */
+                transform: translateX(0); /* IE 10, Fx 16+, Op 12.1+ */
+    }
+}
+
+@keyframes animation-close{
+    0%{
+        opacity: 1;
+        -webkit-transform: translateX(-50px); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+            -ms-transform: translateX(-50px); /* IE 9 */
+                transform: translateX(-50px); /* IE 10, Fx 16+, Op 12.1+ */
+    }
+    100%{
+        opacity: 0;
+        -webkit-transform: translateX(0); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+            -ms-transform: translateX(0); /* IE 9 */
+                transform: translateX(0); /* IE 10, Fx 16+, Op 12.1+ */
+    }
+}

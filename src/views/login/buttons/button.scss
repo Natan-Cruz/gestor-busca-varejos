@@ -1,0 +1,21 @@
+.button {
+    width: 100%;
+    height: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 5px;
+    &:active {
+        transform: scale(.95, .95);
+        transition: 200ms;
+    }
+}
+
+.button-local {
+    background: #e40f0c;
+    color: #fff;
+    margin-top: 15px;
+}
